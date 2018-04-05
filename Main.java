@@ -84,7 +84,7 @@ class CloseButton extends MyButton{
          fr1.dispose();
 	 }
 }
-class DialogFrame extends Frame implements WindowListener{
+class DialogFrame extends JFrame implements WindowListener{
    Image img;
    public DialogFrame(String title,ProgrammFrame fr,GameModel model){
 	   super(title);
@@ -108,7 +108,7 @@ class DialogFrame extends Frame implements WindowListener{
 	   setVisible(true);
    }
    public void paint(Graphics g){
-     // g.drawImage(img,0,0,400,800,0,0,552,552,this);
+    
    }
    public void windowActivated(WindowEvent e) {
 		
@@ -132,7 +132,7 @@ class DialogFrame extends Frame implements WindowListener{
 		
 	}
 }
-class MenuFrame extends Frame implements WindowListener{
+class MenuFrame extends JFrame implements WindowListener{
    Image img;
    public MenuFrame(String title){
 	   super(title);
@@ -196,7 +196,7 @@ class MenuFrame extends Frame implements WindowListener{
 }
 
 
-class MyButton extends Button implements ActionListener{
+class MyButton extends JButton implements ActionListener{
    AnimationThread anim;
    public MyButton(String text, int x,int y, int width, int height){
 	   super(text);
@@ -388,7 +388,7 @@ class GameModel{
 	 return false;
   }
 }
-class ProgrammFrame extends Frame implements WindowListener{
+class ProgrammFrame extends JFrame implements WindowListener{
 	GameModel model;
 	public ProgrammFrame(String title, GameModel model){
 		super(title);
