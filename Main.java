@@ -1,25 +1,4 @@
-/*
- * без имени.java
- * 
- * Copyright 2018 DELL <DELL@DESKTOP-BMBRIQK>
- * 
- * This program is free software; you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation; either version 2 of the License, or
- * (at your option) any later version.
- * 
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- * GNU General Public License for more details.
- * 
- * You should have received a copy of the GNU General Public License
- * along with this program; if not, write to the Free Software
- * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston,
- * MA 02110-1301, USA.
- * 
- * 
- */
+
 import java.util.*;
 import javax.swing.*;
 import java.awt.*;
@@ -44,7 +23,7 @@ class MenuButton extends MyButton{
      }
      public void actionPerformed(ActionEvent e){
 		 if (size != 0)
-		   new ProgrammFrame("My game",new GameModel(size));
+		   new ProgrammFrame("MagicPuzzle",new GameModel(size));
 	 }
 }
 class RestartButton extends MyButton{
@@ -265,7 +244,7 @@ class GameModel{
   public GameModel(int size){
 	  this.size = size;
     a = new GameButton[size][size];
-    Image img = new ImageIcon("img/img"+(int)(Math.random()*4 + 1)+".png").getImage();
+    Image img = new ImageIcon("img/img"+(int)(Math.random()*5 + 1)+".png").getImage();
     for(int i = 0; i <= size*size-1; i++)
      try{
       a[(i - i%size)/size][i%size] = new GameButton(i+1,(600/size)*((i - i%size)/size),(600/size)*(i%size),(600/size),(600/size),this,img);
