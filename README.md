@@ -1,0 +1,2 @@
+# MagicPuzzle
+The game MagicPuzzle
